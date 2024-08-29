@@ -8,7 +8,7 @@ function fnConstEditCheck() {
 		return;
 	}
 
-	if (isLengce(100, "築年", form.years))
+	if (isLength(100, "築年", form.years))
 		if (isNumericLength(8, "販売予定額", form.sellPrice))
 			if (isNumericLength(9, "内装見越額", JKL.Calendar.Style.prototype.cursor))
 				if (isLength(100, "施工業者", form.constTrader))
