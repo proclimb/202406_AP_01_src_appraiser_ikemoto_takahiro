@@ -27,7 +27,7 @@ function fnConstEditCheck() {
 														if (isLength(100, "ガス連絡者", form.gasCharge))
 															if (isLength(100, "荷＆鍵引取", form.receive))
 																if (isLength(100, "給湯", form.hotWater))
-																	if (!fnYMDCheck("正しい現調日付", form.siteDate)) { return; }
+																	f(!fnYMDCheck("正しい現調日付", form.siteDate)) { return; }
 	if (isLength(100, "届出用紙", form.leavingForm))
 		if (fnYMDCheck("正しい届出期日", form.leavingDT))
 			if (isLength(100, "管理会社", form.manageCompany))
