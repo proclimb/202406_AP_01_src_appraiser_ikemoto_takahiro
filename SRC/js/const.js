@@ -9,8 +9,8 @@ function fnConstEditCheck() {
 	}
 
 	if (isLength(100, "築年", form.years)) { return; }
-	if (isNumericLength(8, "販売予定額", form.sellPrice))
-		if (isNumericLength(9, "内装見越額", JKL.Calendar.Style.prototype.cursor)) { return; }
+	if (isNumericLength(9, "販売予定額", form.sellPrice)) { return; }
+	if (isNumericLength(9, "内装見越額", JKL.Calendar.Style.prototype.cursor)) { return; }
 	if (isLength(100, "施工業者", form.constTrader))
 		if (isNumericLength(9, "工事金額", form.constPrice))
 			if (isLength(100, "追加工事", form.constAdd))
