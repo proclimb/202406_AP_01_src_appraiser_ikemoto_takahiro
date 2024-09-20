@@ -96,6 +96,8 @@ function fnSqlFTitleDelete($pdo, $DocNo)
 
     // クエリを実行
     $stmt->execute();
+
+    return $sql;
 }
 
 //
