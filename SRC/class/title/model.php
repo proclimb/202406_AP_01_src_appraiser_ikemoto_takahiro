@@ -76,7 +76,7 @@ function fnSqlFTitleDelete($DocNo)
     $sql = "UPDATE TBLDOC";
     $sql .= " SET DEL = -1";
     $sql .= ",UPDT = CURRENT_TIMESTAMP";
-    $sql .= " WHERE DocNo = '$DocNo'";
+    $sql .= " WHERE DOCNO = '$DocNo'";
 
     return $sql;
 }
