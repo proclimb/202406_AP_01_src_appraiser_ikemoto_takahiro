@@ -71,6 +71,7 @@ function fnSqlFTitleInsert($param)
 //
 // タイトル管理情報削除
 //
+/*
 function fnSqlFTitleDelete($DocNo)
 {
     $sql = "UPDATE TBLDOC";
@@ -79,6 +80,22 @@ function fnSqlFTitleDelete($DocNo)
     $sql .= " WHERE DOCNO = '$DocNo'";
 
     return $sql;
+}
+*/
+
+function fnSqlFTitleDelete($pdo, $DocNo)
+{
+    // SQL文にプレースホルダを使う
+    $sql = "UPDATE TBLDOC SET DEL = -1, UPDT = CURRENT_TIMESTAMP WHERE DOCNO = :DocNo";
+
+    // プリペアドステートメントを作成
+    $stmt = $pdo->prepare($sql);
+
+    // プレースホルダに値をバインド
+    $stmt->bindParam(':DocNo', $DocNo, PDO::PARAM_STR);
+
+    // クエリを実行
+    $stmt->execute();
 }
 
 //
